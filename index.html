@@ -1,0 +1,50 @@
+
+<!-- LOGO -->
+<div class="icon">
+    <img src="logo.png" alt="MUNNA BHAIYA Logo">
+</div>
+
+<h1>MUNNA BHAIYA</h1>
+
+<div class="sub">
+    Welcome to MUNNA BHAIYA Official Channel
+</div>
+
+<div id="members">JOIN OUR COMMUNITY</div>
+
+<!-- COUNTDOWN -->
+<div id="timer" style="
+    color:#ffc857;
+    font-size:18px;
+    font-weight:900;
+    margin-bottom:15px;">
+    PLEASE WAIT 6 SECONDS...
+</div>
+
+<!-- JOIN BUTTON -->
+<a id="jbtn"
+   href="https://t.me/+DN3W-7fswOxiYzll"
+   target="_blank"
+   rel="noopener noreferrer"
+   style="display:none;">
+   ✈ JOIN CHANNEL
+</a>
+
+<script>
+let seconds = 6;
+
+const timer = document.getElementById("timer");
+const joinBtn = document.getElementById("jbtn");
+
+const countdown = setInterval(function() {
+    seconds--;
+
+    if (seconds > 0) {
+        timer.innerHTML = "PLEASE WAIT " + seconds + " SECONDS...";
+    } else {
+        clearInterval(countdown);
+        timer.innerHTML = "✓ YOU CAN JOIN NOW!";
+        joinBtn.style.display = "flex";
+    }
+}, 1000);
+</script>
